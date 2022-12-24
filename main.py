@@ -49,19 +49,19 @@ while True:
                 noteToPlay = "pause"
                 indexOfNoteToPlay = landmarks[8][0] * 7 / width
                 if 0 <= indexOfNoteToPlay < 1:
-                    noteToPlay = "A"
-                elif 1 <= indexOfNoteToPlay < 2:
-                    noteToPlay = "B"
-                elif 2 <= indexOfNoteToPlay < 3:
                     noteToPlay = "C"
-                elif 3 <= indexOfNoteToPlay < 4:
+                elif 1 <= indexOfNoteToPlay < 2:
                     noteToPlay = "D"
-                elif 4 <= indexOfNoteToPlay < 5:
+                elif 2 <= indexOfNoteToPlay < 3:
                     noteToPlay = "E"
-                elif 5 <= indexOfNoteToPlay < 6:
+                elif 3 <= indexOfNoteToPlay < 4:
                     noteToPlay = "F"
-                elif indexOfNoteToPlay >= 6:
+                elif 4 <= indexOfNoteToPlay < 5:
                     noteToPlay = "G"
+                elif 5 <= indexOfNoteToPlay < 6:
+                    noteToPlay = "A"
+                elif indexOfNoteToPlay >= 6:
+                    noteToPlay = "B"
                 cv2.putText(frame, noteToPlay, (10, 50), cv2.FONT_HERSHEY_SIMPLEX,
                             1, (0, 255, 0), 2, cv2.LINE_AA)
                 player.play_note(noteToPlay, 0.5)
